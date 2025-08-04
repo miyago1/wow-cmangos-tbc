@@ -13,6 +13,8 @@ pipeline {
                     mkdir -p build
                     cd build
                     cmake ../mangos-tbc -DCMAKE_INSTALL_PREFIX=$WORKSPACE/run -DBUILD_EXTRACTORS=ON -DPCH=1 -DDEBUG=0 -DBUILD_PLAYERBOTS=ON
+                    make
+                    make install
                     ls $WORKSPACE/run
                 '''
             }
