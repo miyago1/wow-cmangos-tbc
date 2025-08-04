@@ -10,7 +10,7 @@ pipeline {
                 sh '''
                     mkdir build
                     cd build
-                    cmake ../mangos -DCMAKE_INSTALL_PREFIX=$WORKSPACE/run -DBUILD_EXTRACTORS=ON -DPCH=1 -DDEBUG=0 -DBUILD_PLAYERBOTS=ON
+                    cmake ../mangos-tbc -DCMAKE_INSTALL_PREFIX=$WORKSPACE/run -DBUILD_EXTRACTORS=ON -DPCH=1 -DDEBUG=0 -DBUILD_PLAYERBOTS=ON
                     ls $WORKSPACE/run
                 '''
             }
