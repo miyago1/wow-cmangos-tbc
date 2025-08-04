@@ -6,7 +6,9 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello, World!'
-                git branch: 'master', url: 'https://github.com/cmangos/mangos-tbc.git'
+                dir 'cmangos-tbc' {
+                    git branch: 'master', url: 'https://github.com/cmangos/mangos-tbc.git'
+                }
                 sh '''
                     mkdir -p build
                     cd build
