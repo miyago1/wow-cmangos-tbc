@@ -22,6 +22,7 @@ pipeline {
                         cp -v anticheat.conf.dist anticheat.conf
                     '''
                 }
+                sh 'cp -vr "$WORKSPACE/run" "/mnt/lxc-shared/wow/builds/cmangos-tbc/$BUILD_NUMBER"'
             }
         }
     }
