@@ -9,6 +9,9 @@ pipeline {
                 dir('mangos') {
                     git branch: 'master', url: 'https://github.com/cmangos/mangos-tbc.git'
                 }
+                dir('tbc-db') {
+                    git branch: 'master', url: 'git clone https://github.com/cmangos/tbc-db.git'
+                }
                 dir('playerbots') {
                     git branch: 'master', url: 'https://github.com/cmangos/playerbots.git'
                 }
